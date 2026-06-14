@@ -19,7 +19,6 @@ body{
   color:white;
 }
 
-/* overlay biar tulisan jelas */
 .overlay{
   background: rgba(0,0,0,0.75);
   min-height:100vh;
@@ -88,15 +87,19 @@ body{
   display:inline-block;
   margin-top:10px;
   padding:10px 15px;
-  background:#25D366;
   color:white;
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
+  text-align:center;
 }
 
 .telegram{
   background:#0088cc;
+}
+
+.whatsapp{
+  background:#25D366;
 }
 
 .channel{
@@ -111,7 +114,7 @@ body{
 
 <div class="overlay">
 
-  <!-- MENU AWAL -->
+  <!-- HEADER -->
   <div class="header">
     <h1>UZUMAKI MANZ STORE</h1>
     <p>
@@ -120,6 +123,7 @@ body{
     </p>
   </div>
 
+  <!-- MENU -->
   <div class="menu">
     <button onclick="show('home')">HOME</button>
     <button onclick="show('produk')">LIHAT PRODUK</button>
@@ -132,13 +136,11 @@ body{
   <div id="home" class="section active">
     <h2>Selamat Datang 👋</h2>
     <p>
-      Toko ini menyediakan layanan:<br><br>
       • Nokos (Nomor Kosong)<br>
       • Panel Legal Berkualitas<br>
       • Reseller Panel<br>
       • Admin Panel (ADP)<br><br>
-
-      Silahkan pilih menu "Lihat Produk" untuk detail.
+      Silahkan pilih menu untuk melihat detail.
     </p>
   </div>
 
@@ -171,7 +173,7 @@ body{
 
   <!-- LIST HARGA -->
   <div id="harga" class="section">
-    <h2>💰 List Harga</h2>
+    <h2>💰 LIST HARGA</h2>
 
     <div class="product">
       NOKOS = 7.000<br>
@@ -179,59 +181,36 @@ body{
       RESELLER = 20.000<br>
       ADMIN PANEL = 25.000
     </div>
-
-    <p>
-      PANEL & ADP memiliki biaya perpanjang 6K/bulan untuk VPS.
-    </p>
   </div>
 
   <!-- KONTAK -->
   <div id="kontak" class="section">
-    <h2>📞 Kontak</h2>
+    <h2>📞 KONTAK</h2>
 
     <p>WhatsApp:</p>
-    <a class="btn" href="https://wa.me/6287825121119">CHAT WHATSAPP</a>
+    <a class="btn whatsapp" href="https://wa.me/6287825121119">CHAT WHATSAPP</a>
 
     <br><br>
 
     <p>Telegram:</p>
-    <a class="btn telegram" href="https://t.me/Manz3210">@Manz3210</a>
+    <a class="btn telegram" href="https://t.me/Manz3201">t.me/Manz3201</a>
 
     <br><br>
 
-    <a class="btn channel" href="https://t.me/FREEpanel2010">CHANNEL</a>
+    <p>Channel:</p>
+    <a class="btn channel" href="https://t.me/FREEpanel2010">t.me/FREEpanel2010</a>
   </div>
 
   <!-- OWNER -->
   <div id="owner" class="section">
     <h2>👑 OWNER INFO</h2>
-    <p>
-      Nomor: 6287825121119<br>
-      Telegram: @Manz3210
-    </p>
 
-    <br>
+    <div class="product">
+      <p><strong>Nomor:</strong> 6287825121119</p>
+    </div>
 
-    <h3>⚠️ INFO NOKOS</h3>
-    <p>
-      Nomor yang dijual di layanan lain umumnya adalah nomor VoIP (virtual berbasis internet), sehingga risikonya lebih tinggi untuk ditolak atau terkena pembatasan dibandingkan nomor SIM fisik.<br><br>
-
-      Tips agar akun WhatsApp aman di 24 jam pertama:<br><br>
-
-      • Jangan langsung memulai chat, biarkan orang lain yang lebih dulu mengajak bicara<br>
-      • Hindari join grup atau melakukan spam<br>
-      • Jika terlalu banyak login di perangkat yang sama, coba gunakan perangkat lain agar tidak terkena lock oleh sistem WhatsApp.
-    </p>
-
-    <br>
-
-    <h3>⚙️ INFO PANEL</h3>
-    <p>
-      Panel ini legal dan berkualitas anti maling dan anti intip.<br><br>
-
-      Wajar jika mahal karena legal dan aman.<br>
-      ADP & Reseller dikenakan perpanjang 6K/bulan untuk VPS.
-    </p>
+    <a class="btn telegram" href="https://t.me/Manz3201">TELEGRAM OWNER</a>
+    <a class="btn whatsapp" href="https://wa.me/6287825121119">WHATSAPP OWNER</a>
   </div>
 
 </div>
@@ -245,4 +224,4 @@ function show(id){
 </script>
 
 </body>
-  </html>
+</html>
