@@ -6,89 +6,85 @@
 <title>Manz Panel Store</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
-}
-
 body{
-  background: url("/mnt/data/file_00000000d97c7208ab5da94253c2dcca") no-repeat center center fixed;
-  background-size:cover;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:url('bg.jpg') no-repeat center center/cover;
   color:white;
 }
 
+/* overlay */
 .overlay{
   background:rgba(0,0,0,0.75);
   min-height:100vh;
   padding:20px;
 }
 
+/* header */
 .header{
   text-align:center;
   padding:20px;
 }
 
 .header h1{
-  font-size:32px;
-  color:#00e1ff;
+  color:#00ccff;
+  text-shadow:0 0 15px #00ccff;
 }
 
-.header p{
-  margin-top:10px;
-  font-size:16px;
-  color:#ddd;
-}
-
+/* menu */
 .menu{
   display:flex;
   justify-content:center;
-  flex-wrap:wrap;
   gap:10px;
+  flex-wrap:wrap;
   margin:20px 0;
 }
 
 .menu button{
-  padding:10px 18px;
+  padding:10px 15px;
   border:none;
+  border-radius:10px;
   cursor:pointer;
-  border-radius:8px;
-  background:#00e1ff;
+  background:#00ccff;
   color:black;
   font-weight:bold;
+  box-shadow:0 0 10px #00ccff;
 }
 
-.menu button:hover{
-  background:white;
-}
-
+/* section */
 .section{
   display:none;
+  max-width:900px;
+  margin:auto;
+  background:rgba(0,0,0,0.6);
   padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 15px #00ccff;
 }
 
-.section.active{
+.active{
   display:block;
 }
 
-.card{
-  background:rgba(255,255,255,0.1);
-  padding:15px;
+/* product box */
+.box{
+  border:1px solid #00ccff;
+  padding:10px;
   margin:10px 0;
   border-radius:10px;
-  border:1px solid rgba(255,255,255,0.2);
 }
 
-.btn{
+/* button link */
+a.btn{
   display:inline-block;
-  margin-top:10px;
-  padding:10px;
-  background:#00e1ff;
+  padding:10px 15px;
+  background:#00ccff;
   color:black;
   text-decoration:none;
-  border-radius:6px;
+  border-radius:10px;
+  margin-top:10px;
   font-weight:bold;
+  box-shadow:0 0 10px #00ccff;
 }
 </style>
 </head>
@@ -97,105 +93,117 @@ body{
 
 <div class="overlay">
 
-  <div class="header">
-    <h1>MANZ PANEL STORE</h1>
-    <p>Selamat datang di store panel terbaik, legal, aman, dan berkualitas</p>
+<div class="header">
+  <h1>MANZ PANEL STORE</h1>
+  <p>Selamat datang di Panel Store terbaik, murah, aman, dan berkualitas</p>
+</div>
+
+<div class="menu">
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('produk')">Lihat Produk</button>
+  <button onclick="show('harga')">List Harga</button>
+  <button onclick="show('owner')">Owner</button>
+  <button onclick="show('kontak')">Kontak</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section active">
+  <h2>Sambutan</h2>
+  <p>
+    Kami menyediakan berbagai layanan panel dan nokos dengan kualitas terbaik, aman, dan terpercaya.
+    Semua layanan sudah digunakan banyak user dan stabil.
+  </p>
+  <p>
+    Silahkan pilih menu di atas untuk melihat produk dan harga.
+  </p>
+</div>
+
+<!-- PRODUK -->
+<div id="produk" class="section">
+  <h2>Produk Tersedia</h2>
+
+  <div class="box">
+    <b>NOKOS</b> - 7K
+    <p>
+    Nomor yang dijual di layanan lain umumnya adalah nomor VoIP (virtual berbasis internet), sehingga risikonya lebih tinggi untuk ditolak atau terkena pembatasan dibandingkan nomor SIM fisik.
+    </p>
+
+    <p><b>Tips WhatsApp aman 24 jam pertama:</b></p>
+    <ul>
+      <li>Jangan langsung chat</li>
+      <li>Jangan spam atau join grup banyak</li>
+      <li>Hindari login berulang</li>
+    </ul>
   </div>
 
-  <div class="menu">
-    <button onclick="show('home')">HOME</button>
-    <button onclick="show('produk')">PRODUK</button>
-    <button onclick="show('harga')">HARGA</button>
-    <button onclick="show('owner')">OWNER</button>
-    <button onclick="show('kontak')">KONTAK</button>
+  <div class="box">
+    <b>PANEL LEGAL</b>
+    <p>
+    Panel ini legal dan berkualitas anti maling dan anti intip, wajar jika mahal karena terjamin aman.
+    </p>
   </div>
 
-  <!-- HOME -->
-  <div id="home" class="section active">
-    <div class="card">
-      <h2>Selamat Datang 👋</h2>
-      <p>
-        Kami menyediakan Nokos, Panel Legal, Reseller Panel, dan Admin Panel (ADP).
-        Semua produk aman, stabil, dan cocok untuk kebutuhan bisnis digital.
-      </p>
-    </div>
+  <div class="box">
+    <b>RESELLER PANEL</b> - 20K
   </div>
 
-  <!-- PRODUK -->
-  <div id="produk" class="section">
-
-    <div class="card">
-      <h3>NOKOS PANEL</h3>
-      <p>Harga: 7K</p>
-    </div>
-
-    <div class="card">
-      <h3>PANEL LEGAL</h3>
-      <p>Rp 1.000 - 15.000 (1GB - Unlimited)</p>
-    </div>
-
-    <div class="card">
-      <h3>RESELLER PANEL</h3>
-      <p>Harga: 20K</p>
-    </div>
-
-    <div class="card">
-      <h3>ADMIN PANEL (ADP)</h3>
-      <p>Harga: 25K</p>
-    </div>
-
-    <div class="card">
-      <h3>CHANNEL</h3>
-      <a class="btn" href="https://t.me/FREEpanel2010" target="_blank">JOIN CHANNEL</a>
-    </div>
-
-    <div class="card">
-      <p>
-        Nomor yang dijual umumnya VoIP (virtual), lebih berisiko dibanding SIM fisik.
-      </p>
-      <br>
-      <p><b>Tips WhatsApp aman:</b></p>
-      <p>• Jangan spam chat</p>
-      <p>• Jangan join grup langsung</p>
-      <p>• Gunakan secara normal 24 jam pertama</p>
-    </div>
-
-    <div class="card">
-      <p>
-        Panel ini legal, aman, anti intip, dan stabil. ADP & reseller ada biaya perpanjangan VPS 6K/bulan.
-      </p>
-    </div>
-
+  <div class="box">
+    <b>ADMIN PANEL (ADP)</b> - 25K
+    <p>
+    Untuk ADP & reseller dikenakan biaya perpanjang 6K/bulan untuk VPS.
+    </p>
   </div>
 
-  <!-- HARGA -->
-  <div id="harga" class="section">
-    <div class="card">
-      <h3>LIST HARGA</h3>
-      <p>Nokos: 7K</p>
-      <p>Panel: 1K - 15K</p>
-      <p>Reseller: 20K</p>
-      <p>Admin Panel: 25K</p>
-    </div>
+  <div class="box">
+    <b>INFORMASI TAMBAHAN</b>
+    <p>
+    Jika berminat silahkan pilih menu yang tersedia dan hubungi admin.
+    </p>
+    <p><b>Telegram:</b> @Manz3210</p>
   </div>
 
-  <!-- OWNER -->
-  <div id="owner" class="section">
-    <div class="card">
-      <h3>OWNER</h3>
-      <p>Telegram: @Manz3210</p>
-      <p>Nomor: 6287825121119</p>
-    </div>
-  </div>
+  <a class="btn" href="https://t.me/FREEpanel2010" target="_blank">CHANNEL</a>
 
-  <!-- KONTAK -->
-  <div id="kontak" class="section">
-    <div class="card">
-      <h3>KONTAK</h3>
-      <p>WhatsApp: 6287825121119</p>
-      <p>Telegram: @Manz3210</p>
-    </div>
+</div>
+
+<!-- LIST HARGA -->
+<div id="harga" class="section">
+  <h2>List Harga</h2>
+
+  <div class="box">
+    <p>Nokos = 7.000</p>
+    <p>Panel 1GB = 1.000</p>
+    <p>Panel 2GB = 2.000</p>
+    <p>Panel 3GB = 3.000</p>
+    <p>Panel 4GB = 4.000</p>
+    <p>Panel 5GB = 5.000</p>
+    <p>Panel 6GB = 6.000</p>
+    <p>Panel 7GB = 7.000</p>
+    <p>Panel 8GB = 8.000</p>
+    <p>Panel 9GB = 9.000</p>
+    <p>Panel 10GB = 10.000</p>
+    <p>Unlimited = 15.000</p>
+    <p>Reseller Panel = 20.000</p>
+    <p>Admin Panel = 25.000</p>
   </div>
+</div>
+
+<!-- OWNER -->
+<div id="owner" class="section">
+  <h2>Owner</h2>
+  <p>Nama: Manz</p>
+  <p>Telegram: @Manz3210</p>
+</div>
+
+<!-- KONTAK -->
+<div id="kontak" class="section">
+  <h2>Kontak</h2>
+  <p>WhatsApp Admin:</p>
+
+  <a class="btn" href="https://wa.me/6287825121119" target="_blank">
+    Chat WhatsApp
+  </a>
+</div>
 
 </div>
 
